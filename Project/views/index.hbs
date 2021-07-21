@@ -1,0 +1,86 @@
+<h1>Welcome!</h1>
+<section class="insert">
+    <h3>New project</h3>
+    <form action="/insert" method="post">
+    {{#each errors}} 
+    <div id="alert" class="alert-div">
+     <button type="button" id="btn-close" class="alert-div">X</button>{{text}}
+    </div>
+     {{/each}}
+        <div class="input">
+            <label for="pname">Project name</label>
+            <input type="text" id="pname" name="pname" placeholder="Enter project name.." required>
+        </div>
+        <div class="input">
+            <label for="client">Client</label>
+            <input type="text" id="client" name="client" placeholder="Enter client name.." required>
+        </div>
+        <div class="input">
+            <label for="type">Type</label>
+            <select id="type" name="type">
+              <option value="a">A</option>
+              <option value="b">B</option>
+              <option value="c">C</option>
+            </select>
+        </div>
+        <div class="input">
+            <label for="date1">Delivery date:</label>
+            <input type="date" id="date1" name="date1">
+        </div>
+        <div class="input">
+            <label for="date2">Real date:</label>
+            <input type="date" id="date2" name="date2">
+        </div>
+        </br>
+        <button id="btn" type="submit">Add project</button>
+    </form>
+</section>
+<section class="get">
+     <h3>Projects list</h3>
+     <a href="/get-data">LOAD PROJECTS</a>
+     <div class="scroll">
+       <div>
+           {{# each items }}  
+               <article class="item"><form action="/deletee/{{this.pname}}" method="POST">
+               <button id="DelButton" type="submit">✘</button></form>
+                   <div id="divname">Project name: {{ this.pname }}</div>
+                   <div>Client: {{ this.client }}</div>
+                   <div>Type: {{ this.type }}</div>
+                   <div>Delivery date: {{ this.date1 }}</div>
+                   <div>Real date: {{ this.date2 }}</div>
+               </article>
+           {{/each}}
+    
+       </div>
+     </div>
+   </section>
+</section>
+<section class="update">
+    <h3>Late projects</h3>
+     <a href="/update">LOAD LATE PROJECTS</a>
+      <div class="scroll">
+          <div>
+             {{# each elements }} 
+                {{#if this.date1 this.date2 }}
+                   <article class="item" id="late">
+                     <div>Project name: {{ this.pname }}</div>
+                     <div>Late: {{#lateMonth this.date1 this.date2}}{{this}}{{/lateMonth}} month(s) and {{#lateDay this.date1 this.date2}}
+                         {{this}}{{/lateDay}} day(s) 
+                     </div>
+                   </article>
+                {{/if}}
+             {{/each}}
+          </div>
+      </div>      
+</section>
+<!-- <section class="delete">
+    <h3>Delete project</h3>
+    <form action="/delete" method="post">
+        <div class="input">
+            <label for="pname">Project name</label>
+            <input type="text" id="pname" name="pname" placeholder="Enter project's name to delete here..">
+        </div>
+        </br>
+        <button type="submit">DELETE</button>
+    </form>
+</section> -->

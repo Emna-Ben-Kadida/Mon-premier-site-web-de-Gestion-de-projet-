@@ -1,0 +1,141 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url(prjt.jpg);
+  backface-visibility: inherit;
+  transition: 0.3s;
+  margin-bottom: 45%;
+  z-index: 99;
+  transition: 0.3s;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1 {
+  color: rgb(33, 18, 46);
+  padding: 50px;
+  text-align: center !important;
+  font-size: 60px;
+  font-weight: bold;
+}
+h1:hover {
+  color: #665b94;
+}
+a {
+  color: #543b8a;
+  text-decoration: none;
+}
+a:hover {
+  color:rgb(230, 233, 190);
+}
+
+section {
+  float: left;
+  background: #bdc3c7;
+  padding: 10px;
+  margin: 30px;
+  width: 300px;
+  box-shadow: 3px 3px 1px #34495e;
+  min-height: 400px;
+}
+
+section:first-of-type {
+  margin-left: 0;
+}
+
+section:last-of-type {
+  margin-right: 0;
+}
+
+section h3 {
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.insert {
+  background: #b2b0ca;
+}
+
+.get {
+  background: #b2b0ca;
+}
+
+.update {
+  background: #b2b0ca;
+}
+
+.delete {
+  background: #b2b0ca;
+  margin-left: 33.3%;
+}
+
+.input label {
+  display: block;
+  font-weight: bold;
+  padding: 2px 0;
+}
+
+input{
+  font: inherit;
+  border:1.2px solid ;
+}
+#btn {
+  background-color: #493479;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 10px;
+  opacity: 1;
+  transition: 0.3s;
+  display: inline-block;
+  text-decoration: none;
+  cursor: pointer;
+}
+#btn:hover {
+  opacity: 0.5;
+  font-size: 13px;
+}
+#DelButton{
+  margin-left: 90%;
+  background:#95a5a6;
+  border: 1px solid black;
+  border-radius: 50% ;
+}
+#DelButton:hover {
+  background:#d0ceeb;
+}
+.item {
+  margin: 10px 0;
+  margin-right: 10px;
+  background: #95a5a6;
+  border: 1px solid black;
+  padding: 2%;
+}
+#pname {
+  width : 230px;
+}
+#late {
+  background-color: rgb(233, 233, 194);
+}
+.scroll {
+  width:310px;
+  height:326px;
+  background: #b2b0ca;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+#divname{
+  margin-top: -6%;
+}
+#alert {
+  margin: 10px 0;
+  margin-right: 15%;
+  background: #e6a0a0;
+  border: 1px solid rgb(238, 131, 131);
+  padding: 2%;
+}
+#btn-close {
+  margin-left: 90%;
+  background:#e6a0a0;
+  border: none;
+}
